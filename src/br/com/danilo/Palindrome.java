@@ -1,12 +1,8 @@
-import java.io.BufferedReader;
-import java.io.InputStreamReader;
-import java.util.Date;
-import java.util.Scanner;
+package br.com.danilo;
 
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) throws InterruptedException {
+public class Palindrome {
+
+    public static void main(String[] args) {
         String word = "tenet";
         //Scanner input = new Scanner(System.in);
         //word = input.nextLine();
@@ -14,6 +10,7 @@ public class Main {
         //long start = new Date().getTime();
         //Thread.sleep(200);
         boolean result = isPalindrome(word);
+        System.out.println(result);
         //System.out.println(new Date().getTime() - start + " ms");
     }
 
@@ -22,11 +19,9 @@ public class Main {
         for(int i = 0; i < wordLen; i++) {
             if(word.charAt(i) != word.charAt(wordLen - 1 - i)) {
                 return false;
-            };
+            }
         }
 
         return true;
     }
-
 }
-
